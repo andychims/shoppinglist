@@ -20,25 +20,22 @@ h1 	{
 	margin-bottom: 21px;
 }
 
-.add_form {
+.add_form, .price_form, .quantity_form {
 	padding: 10px;
-	margin: 0 10px 18px 0;
+	margin: 0 10px 8px 0;
 	float:left;
-	font-size: 1em;
+}
+
+.add_form {
+		font-size: 1em;
 }
 
 .price_form {
-	padding: 10px;
-	margin: 0 10px 18px 0;
-	float:left;
 	font-size: 1em;
 	width: 30px;
 }
 
 .quantity_form {
-	padding: 10px;
-	margin: 0 10px 18px 0;
-	float:left;
 	font-size: 1em;
 	width: 30px;
 }
@@ -54,7 +51,12 @@ h1 	{
 	cursor: pointer;
 }
 
-
+.error {
+	display: none;
+	clear: both;
+	color: red;
+	font-size: 0.7em;
+}
 
 ul {
 	clear:both;

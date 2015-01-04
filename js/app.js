@@ -8,7 +8,8 @@ $(document).ready(function() {
 		var quantity = $(".quantity_form").val();
 		//append to the ul, "<li>"+todo_text+"</li>"
 		if(!$.trim($('.add_form').val())) {
-			alert('Please enter text to add to the list');
+			console.log("please enter text");
+			$(".error").show(600, function(){ $(this).delay(1000).hide(600);});
 		} 
 		else {
 			$(".add_button").closest("#main").find("ul").append("<li>" + todo_text + " = $" + price*quantity + "</li>");
@@ -60,13 +61,26 @@ $(document).ready(function() {
 	//if it's not already checked - ie doesn't have the completed class
 	//on mouseover add li_hover class, on mouseout remove the li_hover class
 	$("ul").on("mouseenter", "li", function(){
-		if ($(this).hasClass("completed")) {	
-		}
-		else {
+		// if ($(this).hasClass("completed")) {	
+		// }
+		// else {
+		// 	$(this).toggleClass("li_hover");
+		// 	$(this).append("<span class='mark_completed'>&nbsp; - &nbsp;(mark completed)</span>");
+		// 	$(this).prepend("<i class='fa fa-navicon hamburger'></i>");
+		// }
+
+		if ($(this).not(".comple")) {
 			$(this).toggleClass("li_hover");
 			$(this).append("<span class='mark_completed'>&nbsp; - &nbsp;(mark completed)</span>");
 			$(this).prepend("<i class='fa fa-navicon hamburger'></i>");
+			console.log("asdf");
 		}
+
+
+
+
+
+
 	});
 	$("ul").on("mouseleave", "li", function(){
 		$(this).find("span").remove();
